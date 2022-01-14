@@ -1,0 +1,55 @@
+@use "vars";
+
+
+.container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+.description {
+  color: orange;
+  font-size: 38px;
+  font-weight: bold;
+}
+.error {
+  font-size: 156px;
+  margin: 0 auto;
+  animation: 2.5s stretch ease-out alternate infinite;
+  // animation-name: stretch;
+  // animation-duration: 1.5s;
+  // animation-timing-function: ease-out;
+  animation-delay: 0;
+  // animation-direction: alternate;
+  // animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+.error > span {
+  animation: 2.5s stretch1 ease-out alternate infinite;
+}
+
+@keyframes stretch1 {
+  0% {
+    color: orange;
+  }
+  50% {
+    color: yellow;
+  }
+  100% {
+    color: red;
+  }
+}
+
+@keyframes stretch {
+  0% {
+    transform: scale(.3);
+    color: red;
+  }
+  50% {
+    color: orange;
+  }
+  100% {
+    transform: scale(2.5);
+    color: yellow;
+  }
+}
